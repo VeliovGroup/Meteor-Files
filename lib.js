@@ -19,6 +19,9 @@ const helpers = {
   isFunction(obj) {
     return typeof obj === 'function' || false;
   },
+  isDate(date) {
+    return !Number.isNaN(new Date(date).getDate());
+  },
   isEmpty(obj) {
     if (this.isDate(obj)) {
       return false;
