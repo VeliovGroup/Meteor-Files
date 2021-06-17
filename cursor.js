@@ -10,6 +10,7 @@ import { Meteor } from 'meteor/meteor';
  */
 export class FileCursor {
   constructor(_fileRef, _collection) {
+    _fileRef.public = _collection.public;
     this._fileRef    = _fileRef;
     this._collection = _collection;
     Object.assign(this, _fileRef);
