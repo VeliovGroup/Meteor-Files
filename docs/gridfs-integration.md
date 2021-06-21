@@ -1,7 +1,6 @@
 ### Use GridFS with `gridfs-stream` as a storage
 
-**Deprecation warning:** The `gridfs-stream` [has not been updated in a long time](https://github.com/aheckmann/gridfs-stream) and is therefore
-considered deprecated. An alternative is to use the Mongo driver's native `GridFSBucket`, which is also [described in
+> :warning: **Deprecation warning:** The `gridfs-stream` [has not been updated in a long time](https://github.com/aheckmann/gridfs-stream) and its implementation relies on the deprecated [`GridStore API`](https://mongodb.github.io/node-mongodb-native/3.6/api/GridStore.html). An alternative is to use the Mongo driver's native `GridFSBucket`, which is also [described in
 this wiki](https://github.com/VeliovGroup/Meteor-Files/blob/master/docs/gridfs-bucket-integration.md).
 
 Example below shows how to handle (store, serve, remove) uploaded files via GridFS.
@@ -59,7 +58,7 @@ let gfs;
 if (Meteor.isServer) {
   gfs = Grid(
     MongoInternals.defaultRemoteCollectionDriver().mongo.db,
-    MongoInternals.NpmModule
+    MongoInternals.NpmModules.mongodb.module
   );
 }
 ```
@@ -132,7 +131,7 @@ let gfs;
 if (Meteor.isServer) {
   gfs = Grid(
     MongoInternals.defaultRemoteCollectionDriver().mongo.db,
-    MongoInternals.NpmModule
+    MongoInternals.NpmModules.mongodb.module
   );
 }
 

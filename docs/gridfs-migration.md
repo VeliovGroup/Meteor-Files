@@ -20,7 +20,7 @@ First create three Methods in P that each share one of the three crucial Parts o
 
 *This assumes the [default configuration of your GridFS](https://github.com/VeliovGroup/Meteor-Files/blob/master/docs/gridfs-bucket-integration.md) which is by default using the `db.fs.files` and `db.fs.chunks` collections.*
 
-*For custom configuration you may consult the JS Mongo Native Driver documentation on [GridFSBucket](http://mongodb.github.io/node-mongodb-native/3.2/api/GridFSBucket.html).*
+*For custom configuration you may consult the JS Mongo Native Driver documentation on [GridFSBucket](http://mongodb.github.io/node-mongodb-native/3.6/api/GridFSBucket.html).*
 
 #### P/server/sync.js
 
