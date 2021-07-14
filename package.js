@@ -13,7 +13,7 @@ Npm.depends({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.9');
+  api.versionsFrom(['1.9', '2.3']);
   api.use('webapp', 'server');
   api.use(['reactive-var', 'tracker', 'ddp-client'], 'client');
   api.use(['mongo', 'check', 'random', 'ecmascript', 'fetch', 'ostrio:cookies@2.7.0'], ['client', 'server']);
